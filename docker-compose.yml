@@ -1,0 +1,9 @@
+services:
+  olx-bot:
+    build: .
+    restart: always
+    env_file: .env
+    environment:
+      DB_PATH: /bot/data/olx_bot.db
+    volumes:
+      - ./data:/bot/data
